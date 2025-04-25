@@ -14,81 +14,82 @@ export const help = async (args: string[]): Promise<string> => {
       c += Object.keys(bin).sort()[i - 1] + ' ';
     }
   }
-  return `Welcome! Here are all the available commands:
+  return `欢迎光临!
+以下是所有可用的命令：
 \n${c}\n
-[tab]: trigger completion.
-[ctrl+l]/clear: clear terminal.\n
-Type 'sumfetch' to display summary.
+[tab]: 自动补全相应指令。
+[ctrl+l]/clear: 打扫当前终端窗口。\n
+输入“lm”显示摘要。
 `;
 };
 
 // Redirection
-export const repo = async (args: string[]): Promise<string> => {
-  window.open(`${config.repo}`);
-  return 'Opening Github repository...';
+export const blog = async (args: string[]): Promise<string> => {
+  window.open(`${config.blog}`);
+  return '正在打开博客...';
 };
 
 // About
 export const about = async (args: string[]): Promise<string> => {
   return `Hi, I am ${config.name}. 
-Welcome to my website!
-More about me:
-'sumfetch' - short summary.
-'resume' - my latest resume.
-'readme' - my github readme.`;
+欢迎来到我的个人网站!
+查看更多信息：
+'lm' - 我的个人名片。
+'gallery' - 查看我的画廊。
+'readme' - 查看我的 GitHub README。`;
 };
 
-export const resume = async (args: string[]): Promise<string> => {
-  window.open(`${config.resume_url}`);
-  return 'Opening resume...';
+export const gallery = async (args: string[]): Promise<string> => {
+  window.open(`${config.gallery}`);
+  return '正在打开画廊...';
 };
 
 // Donate
 export const donate = async (args: string[]): Promise<string> => {
-  return `thank you for your interest. 
-here are the ways you can support my work:
+  return `谢谢你的关心。
+以下是您支持我的方法：
 - <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.paypal}" target="_blank">paypal</a></u>
-- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.patreon}" target="_blank">patreon</a></u>
+- <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.donate_urls.buymeacoffee}" target="_blank">buymeacoffee</a></u>
 `;
 };
 
 // Contact
 export const email = async (args: string[]): Promise<string> => {
   window.open(`mailto:${config.email}`);
-  return `Opening mailto:${config.email}...`;
+  return `正在发送电子邮件到 ${config.email}...`;
 };
 
 export const github = async (args: string[]): Promise<string> => {
   window.open(`https://github.com/${config.social.github}/`);
 
-  return 'Opening github...';
+  return '正在打开 Github...';
 };
 
-export const linkedin = async (args: string[]): Promise<string> => {
-  window.open(`https://www.linkedin.com/in/${config.social.linkedin}/`);
+export const mastodon = async (args: string[]): Promise<string> => {
+  window.open(`https://www.linkedin.com/in/${config.social.mastodon}/`);
 
-  return 'Opening linkedin...';
+  return '正在打开 Mastodon...';
 };
 
 // Search
 export const google = async (args: string[]): Promise<string> => {
   window.open(`https://google.com/search?q=${args.join(' ')}`);
-  return `Searching google for ${args.join(' ')}...`;
+  return `使用 Google 搜索 ${args.join(' ')}...`;
 };
 
 export const duckduckgo = async (args: string[]): Promise<string> => {
   window.open(`https://duckduckgo.com/?q=${args.join(' ')}`);
-  return `Searching duckduckgo for ${args.join(' ')}...`;
+  return `使用 DuckDuckGo 搜索 ${args.join(' ')}...`;
 };
 
 export const bing = async (args: string[]): Promise<string> => {
   window.open(`https://bing.com/search?q=${args.join(' ')}`);
-  return `Wow, really? You are using bing for ${args.join(' ')}?`;
+  return `使用 Bing 搜索 ${args.join(' ')}...`;
 };
 
 export const reddit = async (args: string[]): Promise<string> => {
   window.open(`https://www.reddit.com/search/?q=${args.join(' ')}`);
-  return `Searching reddit for ${args.join(' ')}...`;
+  return `使用 Reddit 搜索 ${args.join(' ')}...`;
 };
 
 // Typical linux commands
@@ -101,16 +102,16 @@ export const whoami = async (args: string[]): Promise<string> => {
 };
 
 export const ls = async (args: string[]): Promise<string> => {
-  return `a
-bunch
-of
-fake
-directories`;
+  return `var
+root
+home
+tmp
+usr`;
 };
 
 export const cd = async (args: string[]): Promise<string> => {
-  return `unfortunately, i cannot afford more directories.
-if you want to help, you can type 'donate'.`;
+  return `暂时无法通过 cd 命令更改目录。
+如果您想得到更多的帮助，请输入“help”。`;
 };
 
 export const date = async (args: string[]): Promise<string> => {
@@ -118,40 +119,43 @@ export const date = async (args: string[]): Promise<string> => {
 };
 
 export const vi = async (args: string[]): Promise<string> => {
-  return `woah, you still use 'vi'? just try 'vim'.`;
+  return `哇，你还用‘vi’？试试“vim”。`;
 };
 
 export const vim = async (args: string[]): Promise<string> => {
-  return `'vim' is so outdated. how about 'nvim'?`;
+  return `“vim”太过时了。“nvim”怎么样？`;
 };
 
 export const nvim = async (args: string[]): Promise<string> => {
-  return `'nvim'? too fancy. why not 'emacs'?`;
+  return `“nvim”?太花哨。为什么不试一下“emacs”？`;
 };
 
 export const emacs = async (args?: string[]): Promise<string> => {
-  return `you know what? just use vscode.`;
+  return `你知道vscode吗？`;
 };
 
 export const sudo = async (args?: string[]): Promise<string> => {
-  window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank'); // ...I'm sorry
-  return `Permission denied: with little power comes... no responsibility? `;
+  window.open(`${config.blog}`);
+  return `没有权限。`;
 };
 
 // Banner
 export const banner = (args?: string[]): string => {
   return `
-█████        ███                       ███████████                                   
-░░███        ░░░                       ░█░░░███░░░█                                   
- ░███        ████  █████ █████  ██████ ░   ░███  ░   ██████  ████████  █████████████  
- ░███       ░░███ ░░███ ░░███  ███░░███    ░███     ███░░███░░███░░███░░███░░███░░███ 
- ░███        ░███  ░███  ░███ ░███████     ░███    ░███████  ░███ ░░░  ░███ ░███ ░███ 
- ░███      █ ░███  ░░███ ███  ░███░░░      ░███    ░███░░░   ░███      ░███ ░███ ░███ 
- ███████████ █████  ░░█████   ░░██████     █████   ░░██████  █████     █████░███ █████
-░░░░░░░░░░░ ░░░░░    ░░░░░     ░░░░░░     ░░░░░     ░░░░░░  ░░░░░     ░░░░░ ░░░ ░░░░░ 
 
-Type 'help' to see the list of available commands.
-Type 'sumfetch' to display summary.
-Type 'repo' or click <u><a class="text-light-blue dark:text-dark-blue underline" href="${config.repo}" target="_blank">here</a></u> for the Github repository.
+  ██▓     ▄▄▄       ▒█████   ███▄ ▄███▓ ▄▄▄       ██▓
+  ▓██▒    ▒████▄    ▒██▒  ██▒▓██▒▀█▀ ██▒▒████▄    ▓██▒
+  ▒██░    ▒██  ▀█▄  ▒██░  ██▒▓██    ▓██░▒██  ▀█▄  ▒██▒
+  ▒██░    ░██▄▄▄▄██ ▒██   ██░▒██    ▒██ ░██▄▄▄▄██ ░██░
+  ░██████▒ ▓█   ▓██▒░ ████▓▒░▒██▒   ░██▒ ▓█   ▓██▒░██░
+  ░ ▒░▓  ░ ▒▒   ▓▒█░░ ▒░▒░▒░ ░ ▒░   ░  ░ ▒▒   ▓▒█░░▓  
+  ░ ░ ▒  ░  ▒   ▒▒ ░  ░ ▒ ▒░ ░  ░      ░  ▒   ▒▒ ░ ▒ ░
+    ░ ░     ░   ▒   ░ ░ ░ ▒  ░      ░     ░   ▒    ▒ ░
+      ░  ░      ░  ░    ░ ░         ░         ░  ░ ░  
+                                                        
+
+输入“help”来查看可用命令的列表。
+输入“lm”显示摘要。
+输入“blog”或者点击<u><a class="text-light-blue dark:text-dark-blue underline" href="${config.blog}" target="_blank">这里</a></u>进入我的博客。
 `;
 };

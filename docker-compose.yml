@@ -1,14 +1,11 @@
-version: "3.7"
 services:
-  liveterm:
+  laomai:
     build:
       context: .
       dockerfile: Dockerfile
       target: base
-    expose:
-      - '3000'
     ports:
-      - '3000:3000'
+      - '6530:3000'
     volumes:
       - ./src/:/home/node/app/src
     command: npm run dev

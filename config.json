@@ -1,39 +1,39 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/cveinnt/cveinnt/master/README.md",
-  "title": "LiveTerm",
-  "name": "John Doe",
-  "ascii": "liveterm",
+  "readmeUrl": "https://github.com/laomaiorg/laomaiorg/raw/refs/heads/main/README.md",
+  "title": "老麦",
+  "name": "老麦(LaoMai)",
+  "ascii": "",
   "social": {
-    "github": "github",
-    "linkedin": "linkedin"
+    "github": "laomaiorg",
+    "mastodon": "@laomai"
   },
-  "email": "contact@email.com",
-  "ps1_hostname": "liveterm",
-  "ps1_username": "visitor",
-  "repo": "https://github.com/Cveinnt/LiveTerm",
-  "resume_url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Resume.pdf",
+  "email": "laomai@88.com",
+  "ps1_hostname": "laomai.org",
+  "ps1_username": "laomai",
+  "blog": "https://www.iamlm.com",
+  "gallery": "https://www.iamlm.com/gallery/",
   "donate_urls": {
-    "paypal": "https://paypal.me/cveinnt",
-    "patreon": "https://patreon.com/cveinnt"
+    "paypal": "https://paypal.me/laomaiorg",
+    "buymeacoffee": "https://buymeacoffee.com/maiht"
   },
   "colors": {
     "light": {
-      "background": "#FBF1C9",
-      "foreground": "#3C3836",
-      "yellow": "#D79921",
-      "green": "#98971A",
-      "gray": "#7C6F64",
-      "blue": "#458588",
-      "red": "#CA2124"
+      "background": "#FDF6E3",
+      "foreground": "#586E75",
+      "yellow": "#B58900",
+      "green": "#859900",
+      "gray": "#6C71C4",
+      "blue": "#268BD2",
+      "red": "#DC322F"
     },
     "dark": {
-      "background": "#2E3440",
-      "foreground": "#E5E9F0",
-      "yellow": "#5E81AC",
-      "green": "#A3BE8C",
-      "gray": "#88C0D0",
-      "blue": "#EBCB8B",
-      "red": "#BF616A"
+      "background": "#002B36",
+      "foreground": "#93A1A1",
+      "yellow": "#B58900",
+      "green": "#859900",
+      "gray": "#6C71C4",
+      "blue": "#268BD2",
+      "red": "#DC322F"
     }
   }
 }
